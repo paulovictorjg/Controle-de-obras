@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Controle de Obras</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+  <h1>📋 Controle de Obras</h1>
+
+  <div>
+    <input type="text" id="obraInput" placeholder="Nome da obra" autocomplete="off" />
+    <input type="number" id="valorInput" placeholder="Valor total da obra" />
+    <button onclick="adicionarObra()">➕ Adicionar Nova Obra</button>
+    <button onclick="logout()">Sair</button>
+  </div>
+
+  <hr />
+
+  <div id="tabelaObras"></div>
+
+  <script type="module" src="/js/guard.js"></script>
+  <script type="module" src="/js/data.js"></script>
+  <script type="module" src="/js/fluxo.js"></script>
+</body>
+
+</html>
