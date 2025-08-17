@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Login — Controle de Obras</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <h1>Entrar</h1>
+
+  <div style="max-width: 360px">
+    <label for="emailInput"><strong>Email</strong></label>
+    <input id="emailInput" type="email" placeholder="voce@exemplo.com" autocomplete="email" />
+
+    <label for="senhaInput"><strong>Senha</strong></label>
+    <input id="senhaInput" type="password" placeholder="••••••••" autocomplete="current-password" />
+
+    <div style="margin-top: 8px">
+      <button onclick="login()">Entrar</button>
+      <button onclick="registrar()">Criar conta</button>
+      <button onclick="loginGoogle()">Entrar com Google</button>
+    </div>
+  </div>
+
+  <script type="module" src="/js/auth.js"></script>
+</body>
+
+</html>
