@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: 
+  linear-gradient(rgba(244,246,248,0.5)),
+  url('/source/imagem/fundo-construcao-civil.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 32px 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 2rem;
+  color: #0078d4;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-inputs label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  padding: 2px 6px;
+  background: #f0f4fa;
+  display: inline-block;
+}
+
+.login-inputs input {
+  padding: 10px;
+  border: 1px solid #ccd6e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.login-inputs input:focus {
+  border-color: #0078d4;
+  outline: none;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0078d4;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #005fa3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #0078d4;
+  color: white;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #0078d4;
+}
+
+.saldo-zero {
+  background-color: #ffe0e0;
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    padding: 18px 8px;
+    max-width: 98vw;
+  }
+  table {
+    font-size: 0.95rem;
+  }
+}

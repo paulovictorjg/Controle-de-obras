@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(244, 246, 248, 0.5)),
+    url('/source/imagem/fundo-construcao-civil.jpg') no-repeat center center
+      fixed;
+  background-size: cover;
+}
+
+.main-container {
+  background: #fff;
+  max-width: 480px;
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main-container h1 {
+  text-align: center;
+  color: #0078d4;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.obra-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.obra-form label {
+  font-weight: 500;
+  margin-bottom: 2px;
+  border-radius: 6px;
+  padding: 2px 6px;
+  background: #f0f4fa;
+  display: inline-block;
+}
+
+.obra-form input {
+  padding: 10px;
+  border: 1px solid #ccd6e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.obra-form input:focus {
+  border-color: #0078d4;
+  outline: none;
+}
+
+.obra-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0078d4;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #005fa3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+#tabelaObras {
+  margin-top: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+td button {
+  padding: 5px;
+  margin: 4px 2px;
+  font-size: 0.9rem;
+  text-align: center;
+
+}
+
+th {
+  background: #0078d4;
+  color: #fff;
+}
+
+.saldo-zero {
+  background-color: #ffe0e0;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    padding: 16px 4px;
+    max-width: 98vw;
+    margin: 12px;
+  }
+  table {
+    font-size: 0.95rem;
+  }
+  .painel {
+    margin-top: 320px;
+    gap: 30px;
+  }
+}

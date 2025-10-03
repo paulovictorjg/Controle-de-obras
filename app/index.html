@@ -4,23 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <title>Controle de Obras</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/index.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 
 <body>
-  <h1>📋 Controle de Obras</h1>
-
-  <div>
-    <input type="text" id="obraInput" placeholder="Nome da obra" autocomplete="off" />
-    <input type="number" id="valorInput" placeholder="Valor total da obra" />
-    <button onclick="adicionarObra()">➕ Adicionar Nova Obra</button>
-    <button onclick="logout()">Sair</button>
+  <div class="main-container">
+    <h1>📋 Controle de Obras</h1>
+    <div class="painel-geral">
+      <div class="painel-obras">
+        <form class="obra-form" onsubmit="adicionarObra(); return false;">
+          <label for="obraInput">Nome da obra</label>
+          <input type="text" id="obraInput" placeholder="Nome da obra" autocomplete="off" required />
+          <label for="valorInput">Valor total da obra</label>
+          <input type="number" id="valorInput" placeholder="Valor total da obra" required />
+          <div class="obra-buttons">
+            <button type="submit">➕ Adicionar Nova Obra</button>
+            <button type="button" onclick="logout()">Sair</button>
+          </div>
+        </form>
+      </div>
+      <div class="painel-sessoes">
+        <hr />
+        <div id="tabelaObras"></div>
+      </div>
+    </div>
   </div>
-
-  <hr />
-
-  <div id="tabelaObras"></div>
 
   <script type="module" src="/js/guard.js"></script>
   <script type="module" src="/js/data.js"></script>
